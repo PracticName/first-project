@@ -58,11 +58,11 @@
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged;
-  staged    -- "???"     --> tracked/comitted;
-
-%% стрелка без текста для примера: 
-  A --> B;
+untracked -- "git add" --> staged;
+staged -- "git commit" --> tracked;
+tracked/comitted -- "Изменения" --> modified;
+modified -- "git add" --> staged
+staged --> modified
 ```
 
  
